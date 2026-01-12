@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <title>Imagine Groupe</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet">
+</head>
+
+<title>Formulaire de Commande - IMAGINE GROUP</title>
+
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="hero_bg_box">
+      <div class="img-box">
+        <img src="images/POSTER_LUNDI.jpg" alt="">
+      </div>
+    </div>
+
+<header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_link-container">
+            <a href="" class="contact_link1">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Croisement des avenues Saio et Mavinga 2, C/Kasa-Vubu Ref: Benie le visionnaire
+              </span>
+            </a>
+            <a href="" class="contact_link2">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +243 822414905
+              </span>
+            </a>
+            <a href="https://www.imaginegrouprdc@gmail.com" class="contact_link3">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                imaginegrouprdc@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                <div class="div">
+                <p class="Pcolor">IMAGINE GROUPE</p>
+              </div>
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="about.html"> A Propos</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html"> Services </a>
+                </li>
+
+                <li class="nav-item active">
+                  <a class="nav-link" href="commande.HTML">Commande</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+<body>
+
+<div class="gloglo">
+  <h2>Passer une commande</h2>
+
+  <form id="commandeForm">
+
+    <label>Nom du client :</label>
+    <input type="text" id="nom" placeholder="Votre nom" required>
+
+    <label>Numéro de téléphone :</label>
+    <input type="text" id="telephone" placeholder="Ex : 0990000000" required>
+
+    <!-- Description -->
+    <label>Description de l'impression :</label>
+    <select id="description" required>
+      <option value="">-- Choisir --</option>
+      <option value="flyers">Flyers</option>
+      <option value="carte">Carte de visite</option>
+      <option value="tshirt">T-shirt</option>
+      <option value="casquette">Casquette</option>
+      <option value="lacoste">Lacoste</option>
+      <option value="gilet">Gilet</option>
+      <option value="bache">Bâche</option>
+      <option value="vinyle">Vinyle</option>
+      <option value="on_way">ON_Way</option>
+    </select>
+
+    <!-- Type d'impression -->
+    <label>Type d'impression :</label>
+    <select id="typeImpression" required>
+      <option value="">-- Sélectionner --</option>
+    </select>
+
+    <!-- Mode d'impression -->
+    <label>Mode d'impression :</label>
+    <select id="modeImpression" required>
+      <option value="">-- Sélectionner --</option>
+    </select>
+
+    <!-- Quantité -->
+    <label>Quantité :</label>
+    <input type="number" id="quantite" min="1" placeholder="Ex : 100" required>
+
+    <button type="submit">Envoyer la commande</button>
+  </form>
+</div>
+
+<script>
+// Récupération des éléments
+const description = document.getElementById('description');
+const typeImpression = document.getElementById('typeImpression');
+const modeImpression = document.getElementById('modeImpression');
+
+// Gestion dynamique des options
+const options = {
+  flyers: {
+    type: ['Papier'],
+    mode: ['Recto', 'Recto/Verso']
+  },
+  carte: {
+    type: ['Papier 250g', 'Papier 350g', 'PVC'],
+    mode: ['Recto', 'Recto/Verso']
+  },
+  tshirt: {
+    type: ['DTF', 'Sublimation'],
+    mode: ['Couleur', 'Noir et blanc']
+  },
+  casquette: {
+    type: ['DTF', 'Sublimation'],
+    mode: ['Couleur']
+  },
+  lacoste: {
+    type: ['DTF', 'Sublimation'],
+    mode: ['Couleur']
+  },
+  gilet: {
+    type: ['DTF', 'Sublimation'],
+    mode: ['Couleur']
+  },
+  bache: {
+    type: ['Bâche'],
+    mode: ['Haute qualité', 'Standard']
+  },
+  vinyle: {
+    type: ['Vinyle'],
+    mode: ['Haute qualité', 'Standard']
+  },
+
+   On_Way: {
+    type: ['On_way'],
+    mode: ['Haute qualité', 'Standard']
+  }
+};
+
+// Mise à jour dynamique
+
+description.addEventListener('change', () => {
+  const valeur = description.value;
+
+  // Réinitialisation
+  typeImpression.innerHTML = '<option value="">-- Sélectionner --</option>';
+  modeImpression.innerHTML = '<option value="">-- Sélectionner --</option>';
+
+  if (options[valeur]) {
+    options[valeur].type.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = t;
+      typeImpression.appendChild(opt);
+    });
+
+    options[valeur].mode.forEach(m => {
+      const opt = document.createElement('option');
+      opt.value = m;
+      opt.textContent = m;
+      modeImpression.appendChild(opt);
+    });
+  }
+});
+
+// Soumission du formulaire
+document.getElementById('commandeForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nom = document.getElementById('nom').value;
+  const telephone = document.getElementById('telephone').value;
+  const description = document.getElementById('description').value;
+  const type = document.getElementById('typeImpression').value;
+  const mode = document.getElementById('modeImpression').value;
+  const quantite = document.getElementById('quantite').value;
+
+  if (!nom || !telephone || !description || !type || !mode || !quantite) {
+    alert("Veuillez remplir tous les champs");
+    return;
+  }
+
+  const message =
+    "📦 *NOUVELLE COMMANDE IMAGINE GROUPE*%0A%0A" +
+    "👤 Nom : " + nom + "%0A" +
+    "📞 Téléphone : " + telephone + "%0A" +
+    "🖨️ Produit : " + description + "%0A" +
+    "📄 Type : " + type + "%0A" +
+    "🎨 Mode : " + mode + "%0A" +
+    "📦 Quantité : " + quantite;
+
+  const numeroWhatsApp = "243837791071"; 
+
+  const url = "https://wa.me/" + numeroWhatsApp + "?text=" + message;
+
+  window.open(url, "_blank");
+
+});
+</script>
+
+
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; <span id="currentYear"></span> Imagine group sas
+      Imprimerie Digitale
+    </p>
+  </footer>
+
+</body>
+</html>
