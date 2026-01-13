@@ -9,12 +9,6 @@ html, body {
   padding: 0;
 }
 
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 @import url("font-awesome.min.css");
 body {
