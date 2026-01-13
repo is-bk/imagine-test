@@ -1,3 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 @import url("font-awesome.min.css");
 body {
   font-family: "Poppins", sans-serif;
