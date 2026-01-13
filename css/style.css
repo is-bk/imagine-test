@@ -974,3 +974,75 @@ a:focus {
   button:hover {
     background: #0056b3;
   }
+
+
+
+@media (max-width: 768px) {
+
+  /* titres */
+  h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  h2, h3, h4 {
+    text-align: center;
+  }
+
+  /* sections */
+  .layout_padding,
+  .layout_padding-top,
+  .layout_padding-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* header */
+  .header_top .contact_link-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* slider */
+  .slider_section .detail-box {
+    text-align: center;
+  }
+
+  .slider_section .detail-box .btn-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* about */
+  .about_section .row {
+    flex-direction: column;
+  }
+
+  .about_section .detail-box {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  /* services */
+  .service_section .box {
+    margin-top: 20px;
+  }
+
+  /* client carousel */
+  .client_section #carouselExampleControls {
+    padding: 0;
+  }
+
+  /* contact */
+  .contact_section .row {
+    flex-direction: column;
+  }
+
+  /* footer */
+  .footer_section {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+
