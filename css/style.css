@@ -369,8 +369,10 @@ a:focus {
 
 .slider_section .detail-box .btn-box a {
   width: 180px;
+  width: 100%;
   text-align: center;
   margin: 5px;
+  max-width: 250px;
 }
 
 .slider_section .detail-box .btn-box .btn-1 {
@@ -1048,4 +1050,7 @@ a:focus {
   }
 }
 
-
+img, video {
+  max-width: 100%;
+  height: auto;
+}
