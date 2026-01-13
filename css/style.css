@@ -120,6 +120,7 @@ body {
 .hero_bg_box .img-box img {
   min-width: 100%;
   min-height: 100%;
+  object-fit: cover;
 }
 
 .hero_bg_box::before {
@@ -1039,4 +1040,12 @@ a:focus {
     flex-direction: column;
   }
 }
+
+@media (max-width: 768px) {
+  .about_section .detail-box {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 
